@@ -11,19 +11,20 @@ export default function Register() {
     password: "",
     city: "",
     state: "",
-    role: "user", // default to user
+    role: "student",
   });
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ Validation
+    // ✅ Validation checks
     if (
       !form.name ||
       !form.age ||
@@ -40,70 +41,42 @@ export default function Register() {
 
     if (!/^\S+@\S+\.\S+$/.test(form.email)) {
       setError("Please enter a valid email address!");
+      setSuccess("");
       return;
     }
 
     if (form.password.length < 6) {
       setError("Password must be at least 6 characters long!");
+      setSuccess("");
       return;
     }
 
     if (isNaN(form.age) || form.age < 10 || form.age > 100) {
       setError("Please enter a valid age between 10 and 100!");
+      setSuccess("");
       return;
     }
 
-    // ✅ Get existing users (real user system)
-    const users = JSON.parse(localStorage.getItem("registered_users")) || [];
-
-    // Check if email exists
+    // ✅ Check if email already exists
+    const users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.some((u) => u.email === form.email)) {
       setError("This email is already registered!");
+      setSuccess("");
       return;
     }
 
-    // ✅ Create new user object
-    const newUser = {
-      id: Date.now(),
-      name: form.name,
-      age: form.age,
-      gender: form.gender,
-      email: form.email,
-      password: form.password,
-      city: form.city,
-      state: form.state,
-      role: form.role === "admin" ? "admin" : "user", // ensure proper role mapping
-      joinedAt: new Date().toLocaleString(),
-      enrolledPrograms: [],
-      favorites: [],
-      consultations: 0,
-    };
+    // ✅ Save user data to localStorage
+    users.push(form);
+    localStorage.setItem("users", JSON.stringify(users));
 
-    // ✅ Save to localStorage
-    users.push(newUser);
-    localStorage.setItem("registered_users", JSON.stringify(users));
-
-    // ✅ Save auth session
-    localStorage.setItem(
-      "auth",
-      JSON.stringify({
-        name: newUser.name,
-        email: newUser.email,
-        role: newUser.role,
-      })
-    );
-
+    // ✅ Success message
     setError("");
-    setSuccess("🎉 Registration successful! Redirecting to your dashboard...");
+    setSuccess("✅ Registration successful! Redirecting to login...");
 
-    // Redirect to appropriate dashboard
+    // ✅ Redirect to login page after 2 seconds
     setTimeout(() => {
-      if (newUser.role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/user/dashboard");
-      }
-    }, 1500);
+      navigate("/login");
+    }, 2000);
   };
 
   return (
@@ -217,12 +190,15 @@ export default function Register() {
               value={form.role}
               onChange={handleChange}
             >
-              <option value="user">Student</option>
+              <option value="student">Student</option>
               <option value="admin">Admin</option>
             </select>
           </div>
 
-          <button className="btn btn-primary w-100 mt-2">Register</button>
+          {/* Submit Button */}
+          <button className="btn btn-primary w-100 mt-2">
+            Register Account
+          </button>
         </form>
       </div>
     </div>

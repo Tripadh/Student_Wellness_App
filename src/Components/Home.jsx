@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+// ✅ Import the image correctly
+import wellnessBanner from "../assets/wellness-banner.png";
+
 export default function Home() {
   return (
     <div className="home-container">
@@ -43,7 +46,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <motion.img
-            src="/assets/wellness-banner.png"
+            src={wellnessBanner}
             alt="Wellness Banner"
             className="hero-image img-fluid rounded-4 shadow-lg"
             initial={{ y: 0 }}

@@ -1,0 +1,106 @@
+/* 🌿 Overall Page Layout */
+.register-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #dbeafe, #f0fdf4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 🌸 Registration Card */
+.register-card {
+  background: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Headings */
+h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0d6efd;
+}
+
+/* 🧾 Form Controls */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+/* 🏷️ Labels */
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* 🚀 Register Button */
+button.btn {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.02);
+}
+
+/* ✅ Success and ❌ Error Messages */
+.alert {
+  border-radius: 10px;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+/* 💫 Animation on Load (optional) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-card {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}

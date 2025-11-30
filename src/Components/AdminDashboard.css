@@ -1,0 +1,29 @@
+.admin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+  border-radius: 10px;
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  text-align: center;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}

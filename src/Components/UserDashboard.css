@@ -1,0 +1,158 @@
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+input.form-control {
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+
+.badge {
+  font-size: 0.85rem;
+}
+/* 🌿 SafeHaven Wellness Dashboard Styles */
+
+/* --- General Layout --- */
+.container {
+  max-width: 1200px;
+}
+
+h3, h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Welcome Message --- */
+.text-primary {
+  color: #2e7dff !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* --- Summary Cards --- */
+.card {
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px 15px;
+}
+
+.card-body h5 {
+  font-weight: 700;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- Search Bar --- */
+input.form-control {
+  border-radius: 25px;
+  padding: 12px 18px;
+  border: 1px solid #cfd8dc;
+  transition: 0.3s ease;
+  font-size: 0.95rem;
+}
+
+input.form-control:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
+  outline: none;
+}
+
+/* --- Program Cards --- */
+.card.h-100 {
+  background: #fefefe;
+  border: 1px solid #f1f1f1;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.h-100:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+}
+
+/* --- Charts Section --- */
+.recharts-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+h5.text-dark {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  h3.fw-bold {
+    font-size: 1.3rem;
+  }
+
+  .card-body h5 {
+    font-size: 1rem;
+  }
+
+  input.form-control {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- WellnessTips Component Section (Bottom) --- */
+.wellness-tips-container {
+  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.wellness-tips-container h6 {
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.wellness-tips-container p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* --- Scrollbar Styling (Optional) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #90caf9;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #42a5f5;
+}

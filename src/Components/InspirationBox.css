@@ -1,0 +1,18 @@
+.inspiration-box {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 500px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inspiration-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  font-weight: 600;
+}

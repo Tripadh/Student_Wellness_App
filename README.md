@@ -1,16 +1,75 @@
-# React + Vite
+🧠 Student Wellness App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application focused on improving student mental health, wellness tracking, and providing helpful resources for stress management.
+Developed as part of a college hackathon with a 3-member team — and I handled core development 💻.
 
-Currently, two official plugins are available:
+🔗 Live Demo: https://student-wellness-app.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 GitHub Repo: https://github.com/Tripadh/Student_Wellness_App
 
-## React Compiler
+🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📝 Mood Tracking System
 
-## Expanding the ESLint configuration
+📅 Daily Wellness Activity Suggestions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎯 Goal Tracking + Weekly Progress Overview
+
+📘 Wellness Resources & Study Stress Tips
+
+💬 Daily Motivational Quotes using Free Public API
+
+🔐 User Authentication (Login/Signup)
+
+💾 Local Database Storage for saving user activity
+
+📊 Clean Dashboard UI with simple interactions
+
+⚡ Fast, responsive and mobile-friendly
+
+🛠️ Tech Stack
+Technology / Tool	Purpose
+HTML / CSS / JavaScript	UI Structure & Interactions
+React.js	Component-based frontend development
+Tailwind CSS	Modern responsive styling
+Local Storage DB	Persists user mood logs & activity data locally
+Local JSON Storage / IndexedDB	Offline data saving & fast retrieval
+Free Public Quotes API	Fetching motivational quotes dynamically
+Authentication (Custom / Local Auth)	Secure login & session handling
+Vercel	Production Deployment
+🧩 How Authentication Works
+
+User credentials stored securely (local DB / encrypted localStorage)
+
+Login persists until logout to enhance UX
+
+No backend dependency → lightweight & fast
+
+(Ideal for hackathons & offline-first projects)
+
+🌐 External API Used
+
+Free Quotes API for motivational messages
+Example endpoint:
+
+GET https://type.fit/api/quotes
+
+
+(Replace with any other API you used — add more below if required)
+
+🚀 Deployment
+
+Hosted live on Vercel — zero-config build & deploy:
+
+🔗 https://student-wellness-app.vercel.app/   
+
+
+🏆 Hackathon Info
+
+Participated in College Hackathon 2025
+
+Team Size: 3
+
+My Role: Core Developer
+
+Focus: Mental wellness + stress-free student productivity
